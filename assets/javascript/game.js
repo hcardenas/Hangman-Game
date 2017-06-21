@@ -1,4 +1,4 @@
-var win_num = 2;
+var win_num = 0;
 var current_word ;
 var hidden_word;
 var current_word_arr;  
@@ -31,17 +31,45 @@ document.onkeyup = function(event) {
 
 
 function game(char) {
-	var hidden_string_arr = hidden_string.split("");
-	var current_word_arraya = current_word.split("");
-
-	for (var i = 0; i < hidden_string.length; i++) {
-		
-	}
-
+	// if player already used or guessed do not count down
 	if (already_guessed.indexOf(char) === -1) {
-		console.log(current_word_arr.indexOf(char));
 		already_guessed.push(char);
-		number_of_guess--;
+		
+		var flag = 0;
+
+
+
+		var hidden_string_arr = hidden_string.split("");
+		var current_word_array = current_word.split("");
+
+		for (var i = 0; i < hidden_string.length; i++) {
+			if (char === current_word_array[i]) {
+				hidden_string_arr[i] = char;
+				flag++;
+			}
+		}
+
+		var new_string = "";
+		for (var i = 0; i < hidden_string_arr.length; i++) {
+			new_string += hidden_string_arr[i];
+		}
+
+		hidden_string = new_string;
+
+
+		
+
+
+		if (hidden_string === current_word ) {
+			win_num++;
+			alert("Congratulations... the word was' " + current_word + "'.");
+			set_up(0);
+
+		}
+		
+		if (flag === 0) {
+			number_of_guess--;
+		}
 	}
 
 	

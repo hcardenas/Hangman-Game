@@ -4,11 +4,7 @@ body, html, .background {
 }
 
 
-.border_c {
-	border: 2px;
-	border-color: white;
-	border-style: dashed;
-}
+
 
 #char_id {
 	height: 250px;
