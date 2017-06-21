@@ -1,0 +1,2 @@
+- async functions are not letting the sound play before the confirm function
+- have to have better words fro mthe dictionary that go with the theme
