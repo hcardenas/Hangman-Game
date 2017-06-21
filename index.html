@@ -5,13 +5,35 @@
 	<title>Hangman Game</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
 <body>
+	<div class="row background">		
+		<div class="col-md-12">
+			<img class="center-block" src="assets/images/hangman.jpeg">
+		</div>
+
+	</div> <!-- end of first row -->
 
 
-
+	<div class="row background">
+		
+		<div class="col-md-3 border_c col-md-offset-3" >
+			<img id="char_id" src="assets/images/hangman_char.png">
+		</div>
+		<div class="col-md-3 border_c  background" align="center">
+			<p>Press any key to get started!</p>
+			<p>wins</p>
+			<div id="win_num"><p>0</p></div>
+			<p>Current word</p>
+			<p id="current_word" ></p>
+			<p>Number of guesses remaining.</p>
+			<div id="number_of_guess"><P>0</P></div>
+			<p>Letters already guessed.</p>
+			<div id="already_guessed"></div>
+		</div>
+	</div> <!-- end of second row -->
 	
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>

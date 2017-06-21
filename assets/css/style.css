@@ -1,4 +1,20 @@
-body {
+body, html, .background {
 	background-color: black;
 	color: white;
+}
+
+
+.border_c {
+	border: 2px;
+	border-color: white;
+	border-style: dashed;
+}
+
+#char_id {
+	height: 250px;
+	width: 150px;
+}
+
+#current_word {
+	letter-spacing: 3px;
 }
